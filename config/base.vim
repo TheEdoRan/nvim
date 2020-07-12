@@ -70,6 +70,7 @@ set splitbelow
 set splitright
 
 set linebreak
+set signcolumn=yes
 set colorcolumn=80
 set autoindent
 set smartindent
