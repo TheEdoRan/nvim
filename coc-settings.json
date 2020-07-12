@@ -1,0 +1,33 @@
+{
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"],
+    "typescriptreact": ["javascriptreact"]
+  },
+  "tsserver.formatOnType": false,
+  "tsserver.npm": "/usr/bin/npm",
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double",
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ],
+  "prettier.trailingComma": "all",
+  "prettier.arrowParens": "always",
+  "prettier.tabWidth": 2,
+  "python.pythonPath": "python3",
+  "explorer.file.column.git.showIgnored": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false
+}
