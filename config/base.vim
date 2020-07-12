@@ -132,3 +132,7 @@ autocmd VimLeave * call system("tmux setw automatic-rename")
 " Emulate VS Code integrated terminal.
 command! IntegratedTerminal silent exec "!tmux split-window -v -p 25"
 map <silent> <A-t> :<C-u>IntegratedTerminal<CR>
+
+" Easier buffer cycling.
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :bprevious<CR>
