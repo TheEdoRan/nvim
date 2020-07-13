@@ -17,6 +17,7 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": [
+    "css",
     "javascript",
     "javascriptreact",
     "typescript",
@@ -29,5 +30,6 @@
   "python.pythonPath": "python3",
   "explorer.file.column.git.showIgnored": true,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false
+  "explorer.previewAction.onHover": false,
+  "emmet.includeLanguages": {}
 }

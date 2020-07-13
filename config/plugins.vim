@@ -298,6 +298,9 @@ command! -bang -nargs=* GGrep
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 
+" CoC extensions
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-yaml', 'coc-emmet', 'coc-vimlsp', 'coc-tsserver', 'coc-python', 'coc-xml', 'coc-css', 'coc-snippets', 'coc-prettier', 'coc-explorer', 'coc-pairs']
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
