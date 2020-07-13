@@ -73,7 +73,7 @@ call plug#end()
 
 
 
-""Set paths for Python executables
+" Set paths for Python executables
 let g:python_host_prog='/usr/bin/python2'
 let g:python3_host_prog='/usr/bin/python3'
 
@@ -88,6 +88,9 @@ endif
 set t_Co=256
 set t_ut=
 colorscheme codedark
+
+" Cursor line highlight color
+highlight CursorLine guibg=#292929
 
 " Status line
 let g:lightline = {
@@ -191,16 +194,17 @@ nmap <leader>hb <Plug>(GitGutterPrevHunk)
 nmap <leader>hp <Plug>(GitGutterPreviewHunk)
 nmap <leader>gb :<C-u>Gblame<cr>
 
-function! ToggleGitSplit()
+function! ToggleGitDiffSplit()
   let l:bufnr = bufnr("^fugitive:///")
   if l:bufnr != -1
-    return 'bw ' . l:bufnr
+    exec 'bw ' . l:bufnr
   else
-    return 'Gdiffsplit'
+    exec 'Gdiffsplit'
   endif
 endfunction
 
-nnoremap <leader>gd :<C-u>exec ToggleGitSplit()<cr>
+command! ToggleGitDiffSplit call ToggleGitDiffSplit()
+nnoremap <leader>gd :<C-u>ToggleGitDiffSplit<CR>
 
 " Session saving
 let g:workspace_create_new_tabs = 0
