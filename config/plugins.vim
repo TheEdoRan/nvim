@@ -50,7 +50,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'luochen1990/rainbow'
 
 " Colors
-Plug 'lilydjwg/colorizer'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'KabbAmine/vCoolor.vim'
 
 " Easy tmux navigation
@@ -299,7 +299,7 @@ command! -bang -nargs=* GGrep
 " other plugin before putting this into your config.
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-yaml', 'coc-emmet', 'coc-vimlsp', 'coc-tsserver', 'coc-python', 'coc-xml', 'coc-css', 'coc-snippets', 'coc-prettier', 'coc-explorer', 'coc-pairs']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-yaml', 'coc-emmet', 'coc-tsserver', 'coc-python', 'coc-xml', 'coc-css', 'coc-snippets', 'coc-prettier', 'coc-explorer', 'coc-pairs', 'coc-vimlsp']
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -395,6 +395,9 @@ let g:strip_whitelines_at_eof=1
 
 " Rainbow parentheses
 let g:rainbow_active = 1
+
+" Colors
+lua require 'colorizer'.setup({'*';}, {names = true; RRGGBBAA = true; css = true;})
 
 " Highlight after yank
 let g:highlightedyank_highlight_duration = 200
