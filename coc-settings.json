@@ -31,5 +31,8 @@
   "explorer.file.column.git.showIgnored": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "emmet.includeLanguages": {}
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  }
 }
