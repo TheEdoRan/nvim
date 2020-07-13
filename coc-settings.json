@@ -27,6 +27,7 @@
   "prettier.trailingComma": "all",
   "prettier.arrowParens": "always",
   "prettier.tabWidth": 2,
+  "python.jediEnabled": false,
   "python.pythonPath": "python3",
   "explorer.file.column.git.showIgnored": true,
   "explorer.icon.enableNerdfont": true,
