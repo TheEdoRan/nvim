@@ -133,6 +133,10 @@ autocmd VimLeave * call system("tmux setw automatic-rename")
 command! IntegratedTerminal silent exec "!tmux split-window -v -p 25"
 map <silent> <A-t> :<C-u>IntegratedTerminal<CR>
 
+" Remap buffer jumps
+nnoremap <A-o> <C-o>
+nnoremap <A-i> <C-i>
+
 " Easier buffer cycling.
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
