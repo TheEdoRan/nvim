@@ -40,6 +40,9 @@ Plug 'thaerkh/vim-workspace'
 " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 
+" Easy motion
+Plug 'easymotion/vim-easymotion'
+
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

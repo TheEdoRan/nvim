@@ -86,3 +86,14 @@ lua require 'colorizer'.setup({'*';}, {names = true; RRGGBBAA = true; css = true
 
 " Highlight after yank
 let g:highlightedyank_highlight_duration = 200
+
+" Easy motion
+" <Leader>f{char} to move to {char(s)}
+let g:EasyMotion_smartcase = 1
+
+" <Leader>f{char} to move to {char}
+map  f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
