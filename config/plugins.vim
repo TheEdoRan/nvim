@@ -64,6 +64,9 @@ let g:workspace_autosave = 0
 set sessionoptions-=blank
 nnoremap <leader>s :ToggleWorkspace<CR>
 
+" Smart line break
+autocmd FileType markdown,mkd,text,mail,rst,tex,textile,asciidoc call pencil#init()
+
 " Markdown preview
 let g:mkdp_port = '42069'
 nmap <leader>mp <Plug>MarkdownPreview

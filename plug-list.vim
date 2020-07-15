@@ -46,6 +46,9 @@ Plug 'easymotion/vim-easymotion'
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Smart line break
+Plug 'reedes/vim-pencil'
+
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm i'  }
 
