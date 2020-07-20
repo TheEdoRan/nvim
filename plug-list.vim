@@ -30,15 +30,15 @@ Plug 'mhinz/vim-sayonara'
 " Surrounding
 Plug 'tpope/vim-surround'
 
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Session saving
 Plug 'thaerkh/vim-workspace'
-
-" Fuzzy finder
-Plug 'junegunn/fzf.vim'
 
 " Easy motion
 Plug 'easymotion/vim-easymotion'
