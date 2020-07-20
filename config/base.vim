@@ -143,3 +143,6 @@ nnoremap <silent> <S-Tab> :bprevious<CR>
 
 " Close netrw after opening file.
 let g:netrw_fastbrowse = 0
+
+" Source current file
+map <leader><space> :<C-u>source %<CR>
