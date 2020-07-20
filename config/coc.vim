@@ -1,5 +1,5 @@
 " Extensions
-let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-yaml', 'coc-emmet', 'coc-python', 'coc-tsserver', 'coc-xml', 'coc-css', 'coc-snippets', 'coc-prettier', 'coc-explorer', 'coc-pairs', 'coc-vimlsp']
+let g:coc_global_extensions = ['coc-json', 'coc-html', 'coc-fzf-preview', 'coc-yaml', 'coc-emmet', 'coc-python', 'coc-tsserver', 'coc-xml', 'coc-css', 'coc-snippets', 'coc-prettier', 'coc-explorer', 'coc-pairs', 'coc-vimlsp']
 
 
 " Completion
