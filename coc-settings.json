@@ -68,5 +68,6 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
-  }
+  },
+  "coc.source.emoji.filetypes": null
 }
