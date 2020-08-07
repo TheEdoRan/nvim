@@ -69,5 +69,6 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "coc.source.emoji.filetypes": null
+  "coc.source.emoji.filetypes": null,
+  "xml.java.home": "/usr/lib/jvm/default"
 }
