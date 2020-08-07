@@ -1,5 +1,4 @@
 " Most of basic configuration borrowed from https://github.com/amix/vimrc
-
 set mouse=a
 
 set history=1000
@@ -9,6 +8,9 @@ let $SHELL='/usr/bin/bash'
 
 filetype plugin on
 filetype indent on
+
+set encoding=utf-8
+set fileencoding=utf-8
 
 set autoread
 au FocusGained,BufEnter * checktime
