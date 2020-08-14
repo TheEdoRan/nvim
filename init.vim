@@ -9,6 +9,7 @@ if empty(glob(stdpath('data') . '/site/autoload/plug.vim'))
 " Otherwise, load every configuration file.
 else
   runtime! ./plug-list.vim
+  runtime! config/theme.vim
   runtime! config/plugins.vim
   runtime! config/coc.vim
   runtime! config/lightline.vim

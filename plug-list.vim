@@ -3,7 +3,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 " Theme
-Plug 'theedoran/vim-code-dark'
+Plug 'joshdick/onedark.vim'
 
 " Status line
 Plug 'itchyny/lightline.vim'
