@@ -1,6 +1,6 @@
 " Status line
 let g:lightline = {
-\ 'colorscheme': 'one',
+\ 'colorscheme': 'codedark',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'modified', 'zoomed', 'cocstatus' ] ],
