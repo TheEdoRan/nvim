@@ -54,6 +54,7 @@ autocmd FileType markdown,mkd,text,mail,rst,tex,textile,asciidoc call pencil#ini
 
 " Markdown preview
 let g:mkdp_port = '42069'
+let g:mkdp_open_to_the_world = 1
 nmap <leader>mp <Plug>MarkdownPreview
 
 " Easy split zooming/unzooming
