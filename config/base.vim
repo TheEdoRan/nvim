@@ -127,14 +127,6 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " Python indent
 autocmd FileType python setlocal tabstop=2 shiftwidth=2
 
-" Rename tmux window when enter/exit editor
-autocmd VimEnter * call system("tmux rename-window nvim")
-autocmd VimLeave * call system("tmux setw automatic-rename")
-
-" Emulate VS Code integrated terminal.
-command! IntegratedTerminal call system("tmux split-window -v -p 25")
-map <silent> <A-t> :<C-u>IntegratedTerminal<CR>
-
 " Remap buffer jumps
 nnoremap <A-o> <C-o>
 nnoremap <A-i> <C-i>

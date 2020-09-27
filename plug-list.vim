@@ -60,9 +60,6 @@ Plug 'luochen1990/rainbow'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'KabbAmine/vCoolor.vim'
 
-" Easy tmux navigation
-Plug 'christoomey/vim-tmux-navigator'
-
 " Easy split zooming/unzooming
 Plug 'dhruvasagar/vim-zoom'
 
