@@ -58,10 +58,10 @@
   "prettier.tabWidth": 2,
   "python.jediEnabled": false,
   "python.pythonPath": "python3",
-  "explorer.file.column.git.showIgnored": true,
+  "explorer.git.showIgnored": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "h": "open:split",
     "s": "open:vsplit"
   },

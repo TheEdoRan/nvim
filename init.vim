@@ -8,9 +8,10 @@ if empty(glob(stdpath('data') . '/site/autoload/plug.vim'))
   exec 'PlugInstall | quitall'
 " Otherwise, load every configuration file.
 else
+  runtime! ./pre-load.vim
   runtime! ./plug-list.vim
-  runtime! config/theme.vim
   runtime! config/plugins.vim
+  runtime! config/theme.vim
   runtime! config/coc.vim
   runtime! config/lightline.vim
   runtime! config/buffers.vim
