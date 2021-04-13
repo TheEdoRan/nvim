@@ -1,7 +1,6 @@
 """ PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 
-" My theme
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
