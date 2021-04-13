@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Initialize plugin system
@@ -139,3 +140,6 @@ let g:lightline = { 'colorscheme': 'codedark' }
 " Markdown preview
 let g:mkdp_port = '42069'
 nmap <leader>mp <Plug>MarkdownPreviewToggle
+
+" Highlighted yank
+let g:highlightedyank_highlight_duration = 300
