@@ -136,10 +136,6 @@ colorscheme codedark
 " Lightline
 let g:lightline = { 'colorscheme': 'codedark' }
 
-" Toggle comment (vim-commentary)
-nmap <C-space> gcc
-vmap <C-space> gc
-
 " Markdown preview
 let g:mkdp_port = '42069'
 nmap <leader>mp <Plug>MarkdownPreviewToggle
