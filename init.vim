@@ -3,7 +3,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-commentary'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
+Plug 'terrortylor/nvim-comment'
 Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -133,8 +135,13 @@ set t_Co=256
 set t_ut=
 colorscheme codedark
 
+" PLUGINS CONFIGURATION
+:lua require('nvim_comment').setup()
+
 " Lightline
-let g:lightline = { 'colorscheme': 'codedark' }
+let g:lightline = { 'colorscheme': 'codedark',
+  \ 'enable': { 'tabline': 0 }
+  \ }
 
 " Markdown preview
 let g:mkdp_port = '42069'
@@ -142,3 +149,25 @@ nmap <leader>mp <Plug>MarkdownPreviewToggle
 
 " Highlighted yank
 let g:highlightedyank_highlight_duration = 300
+
+" Tabline (barbar)
+
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+nnoremap <silent>    <C-w> :BufferClose<CR>
+" Magic buffer-picking mode
+nnoremap <silent> <C-s>    :BufferPick<CR>
