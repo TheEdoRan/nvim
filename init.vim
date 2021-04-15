@@ -5,6 +5,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
+Plug 'windwp/nvim-autopairs'
 Plug 'terrortylor/nvim-comment'
 Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -137,6 +138,7 @@ colorscheme codedark
 
 " PLUGINS CONFIGURATION
 :lua require('nvim_comment').setup()
+:lua require('nvim-autopairs').setup()
 
 " Lightline
 let g:lightline = { 'colorscheme': 'codedark',
