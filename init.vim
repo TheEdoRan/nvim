@@ -70,7 +70,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set undofile
-set undodir=$HOME/.local/share/vim/undo
+set undodir=$HOME/.local/share/nvim/undo
 set expandtab
 set smarttab
 set shiftwidth=2
