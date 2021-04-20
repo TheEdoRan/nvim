@@ -1,9 +1,10 @@
 """ PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'tomasiser/vim-code-dark'
-Plug 'itchyny/lightline.vim'
+Plug 'folke/tokyonight.nvim'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'terrortylor/nvim-comment'
@@ -130,16 +131,17 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 " Colorscheme
 set t_Co=256
 set t_ut=
-colorscheme codedark
+let g:tokyonight_style = "storm"
+colorscheme tokyonight
 
 " PLUGINS CONFIGURATION
-:lua require('nvim_comment').setup()
-:lua require('nvim-autopairs').setup()
-
-" Lightline
-let g:lightline = { 'colorscheme': 'codedark',
-  \ 'enable': { 'tabline': 0 }
-  \ }
+:lua << EOF
+require('lualine').setup{
+  theme = 'tokyonight'
+}
+require('nvim_comment').setup()
+require('nvim-autopairs').setup()
+EOF
 
 " Markdown preview
 let g:mkdp_port = '42069'
@@ -149,7 +151,6 @@ nmap <leader>mp <Plug>MarkdownPreviewToggle
 let g:highlightedyank_highlight_duration = 300
 
 " Tabline (barbar)
-
 " Move to previous/next
 nnoremap <silent>    <A-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-.> :BufferNext<CR>
