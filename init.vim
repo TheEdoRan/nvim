@@ -127,10 +127,6 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " Python indent
 autocmd FileType python setlocal tabstop=2 shiftwidth=2
 
-" Remap buffer jumps
-nnoremap <A-o> <C-o>
-nnoremap <A-i> <C-i>
-
 " Colorscheme
 set t_Co=256
 set t_ut=
