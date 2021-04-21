@@ -131,7 +131,7 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 " Colorscheme
 set t_Co=256
 set t_ut=
-let g:tokyonight_style = "storm"
+let g:tokyonight_style = "night"
 colorscheme tokyonight
 
 " PLUGINS CONFIGURATION
