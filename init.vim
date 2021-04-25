@@ -1,9 +1,10 @@
 """ PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'folke/tokyonight.nvim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ryanoasis/vim-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'windwp/nvim-autopairs'
@@ -129,18 +130,22 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd FileType python setlocal tabstop=2 shiftwidth=2
 
 " Colorscheme
+set termguicolors
 set t_Co=256
-set t_ut=
-let g:tokyonight_style = "night"
-colorscheme tokyonight
+colorscheme codedark
 
 " PLUGINS CONFIGURATION
 :lua << EOF
 require('lualine').setup{
-  theme = 'tokyonight'
+  options = {
+    theme = 'codedark',
+    section_separators = '',
+    component_separators = '|'
+  }
 }
 require('nvim_comment').setup()
 require('nvim-autopairs').setup()
+require('colorizer').setup()
 EOF
 
 " Markdown preview
