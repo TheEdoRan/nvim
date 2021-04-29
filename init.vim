@@ -132,6 +132,7 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 " Colorscheme
 set termguicolors
 set t_Co=256
+set t_ut=
 colorscheme codedark
 
 " PLUGINS CONFIGURATION
