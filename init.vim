@@ -1,7 +1,7 @@
 """ PLUGINS
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'Mofiqul/vscode.nvim'
+Plug 'shaunsingh/moonlight.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -133,14 +133,13 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 set termguicolors
 set t_Co=256
 set t_ut=
-let g:vscode_style = "dark"
-colorscheme vscode
+colorscheme moonlight
 
 " PLUGINS CONFIGURATION
 :lua << EOF
 require('lualine').setup{
   options = {
-    theme = 'vscode',
+    theme = 'moonlight',
     section_separators = '',
     component_separators = '|'
   }
