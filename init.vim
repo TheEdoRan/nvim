@@ -6,6 +6,7 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ryanoasis/vim-devicons'
+Plug 'lambdalisue/suda.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'terrortylor/nvim-comment'
 Plug 'machakann/vim-highlightedyank'
@@ -155,3 +156,7 @@ nmap <leader>mp <Plug>MarkdownPreviewToggle
 
 " Highlighted yank
 let g:highlightedyank_highlight_duration = 300
+
+" Suda
+let g:suda_smart_edit = 1
+command WW :execute ':SudaWrite'
