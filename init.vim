@@ -157,5 +157,4 @@ nmap <leader>mp <Plug>MarkdownPreviewToggle
 let g:highlightedyank_highlight_duration = 300
 
 " Suda
-let g:suda_smart_edit = 1
 command WW :execute ':SudaWrite'
