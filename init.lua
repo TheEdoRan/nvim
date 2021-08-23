@@ -92,9 +92,19 @@ vim.api.nvim_set_keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', keymap_opts)
 vim.api.nvim_set_keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", keymap_opts)
 vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", keymap_opts)
 
-  -- Copy/paste to Windows Clipboard
-vim.api.nvim_set_keymap('v', '<Leader>y', ":'<,'>w !clip.exe<CR><CR>", keymap_opts)
-vim.api.nvim_set_keymap('n', '<Leader>p', ':read !powershell.exe -command "Get-Clipboard"<CR>', keymap_opts)
+-- Setup copy/paste from/to clipboard.
+  -- Check if we're on WSL
+if string.find(vim.fn.system('uname -r'), 'microsoft') ~= nil then
+  vim.api.nvim_set_keymap('v', '<Leader>y', ":'<,'>w !clip.exe<CR><CR>",
+                          keymap_opts)
+  vim.api.nvim_set_keymap('n', '<Leader>p', ':read !powershell.exe -command "Get-Clipboard"<CR>',
+                          keymap_opts)
+else
+  vim.api.nvim_set_keymap('n', '<Leader>yy', '"+yy', keymap_opts)
+  vim.api.nvim_set_keymap('v', '<Leader>y', '"+y', keymap_opts)
+  vim.api.nvim_set_keymap('n', '<Leader>p', '"+p', keymap_opts)
+  vim.api.nvim_set_keymap('n', '<Leader>P', '"+P', keymap_opts)
+end
 
 -- Plugins
 require('nvim_comment').setup()
