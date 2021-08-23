@@ -1,5 +1,4 @@
 # Installation
 
-Clone this repo in `$HOME/.config/nvim`.
-
-Execute `:PackerSync` inside Neovim.
+1. Clone this repo in your preferred path and then execute `./install` to link dotfiles.
+2. Execute `:PackerSync` inside Neovim.
