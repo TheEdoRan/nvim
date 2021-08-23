@@ -34,7 +34,7 @@ local use = require('packer').startup(function()
   use {
     'iamcco/markdown-preview.nvim',
     ft = {'markdown'},
-    run = 'cd app && yarn install',
+    run = 'cd app && npm i',
     cmd = 'MarkdownPreview'
   }
 end)
@@ -95,10 +95,7 @@ vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", keymap_opts)
 -- Setup copy/paste from/to clipboard
   -- WSL platform check
 if string.find(vim.fn.system('uname -r'), 'microsoft') ~= nil then
-  vim.api.nvim_set_keymap('v', '<Leader>y', ":'<,'>w !clip.exe<CR><CR>",
-                          keymap_opts)
-  vim.api.nvim_set_keymap('n', '<Leader>p', ':read !powershell.exe -command "Get-Clipboard"<CR>',
-                          keymap_opts)
+  vim.api.nvim_set_keymap('v', '<Leader>y', ":'<,'>w !clip.exe<CR><CR>", keymap_opts)
 else
   vim.api.nvim_set_keymap('n', '<Leader>yy', '"+yy', keymap_opts)
   vim.api.nvim_set_keymap('v', '<Leader>y', '"+y', keymap_opts)
