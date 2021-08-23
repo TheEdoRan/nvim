@@ -26,5 +26,3 @@ else
 end
 
 map('n', '<Leader>mp', ':MarkdownPreviewToggle<CR>', keymap_opts)
-
-vim.cmd("command WW :execute ':SudaWrite'")

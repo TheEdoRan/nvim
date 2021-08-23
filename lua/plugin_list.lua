@@ -8,7 +8,6 @@ local use = require('packer').startup(function()
   }
   use 'neoclide/jsonc.vim'
   use 'norcalli/nvim-colorizer.lua'
-  use 'lambdalisue/suda.vim'
   use 'windwp/nvim-autopairs'
   use 'terrortylor/nvim-comment'
   use 'machakann/vim-highlightedyank'
