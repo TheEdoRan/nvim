@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-rm "$HOME/.config/nvim" 2>/dev/null
-mkdir -p ~/.config/nvim
-ln -sf "$(pwd)/init.lua" "$HOME/.config/nvim/init.lua" 
+rm -rf "$HOME/.config/nvim" 2>/dev/null
+mkdir -p ~/.config/nvim/lua
+ln -sf "$(pwd)/init.lua" "$HOME/.config/nvim/" 
+ln -sf $(pwd)/lua/* $HOME/.config/nvim/lua
