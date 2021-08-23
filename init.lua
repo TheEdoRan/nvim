@@ -80,7 +80,7 @@ vim.cmd('autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatopt
 -- Keymaps
 local keymap_opts = { noremap = true, silent = true }
 
-  -- If char deleted with 'x', don't put it into clipboard.
+  -- If char deleted with 'x', don't put it into clipboard
 vim.api.nvim_set_keymap('', 'x', '"_x', keymap_opts)
 vim.api.nvim_set_keymap('', 'X', '"_x', keymap_opts)
 
@@ -92,8 +92,8 @@ vim.api.nvim_set_keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', keymap_opts)
 vim.api.nvim_set_keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", keymap_opts)
 vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", keymap_opts)
 
--- Setup copy/paste from/to clipboard.
-  -- Check if we're on WSL
+-- Setup copy/paste from/to clipboard
+  -- WSL platform check
 if string.find(vim.fn.system('uname -r'), 'microsoft') ~= nil then
   vim.api.nvim_set_keymap('v', '<Leader>y', ":'<,'>w !clip.exe<CR><CR>",
                           keymap_opts)
