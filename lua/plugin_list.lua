@@ -16,7 +16,7 @@ local use = require('packer').startup(function()
     'iamcco/markdown-preview.nvim',
     ft = {'markdown'},
     run = 'cd app && npm i',
-    cmd = 'MarkdownPreview'
+    cmd = 'MarkdownPreview',
     opt = true
   }
 end)
