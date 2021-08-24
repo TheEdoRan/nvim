@@ -17,5 +17,6 @@ local use = require('packer').startup(function()
     ft = {'markdown'},
     run = 'cd app && npm i',
     cmd = 'MarkdownPreview'
+    opt = true
   }
 end)
