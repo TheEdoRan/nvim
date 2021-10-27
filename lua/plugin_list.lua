@@ -4,7 +4,7 @@ local use = require('packer').startup(function()
   use 'Mofiqul/vscode.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
-  use 'hoob3rt/lualine.nvim'
+  use 'nvim-lualine/lualine.nvim'
   use 'neoclide/jsonc.vim'
   use 'norcalli/nvim-colorizer.lua'
   use 'windwp/nvim-autopairs'
