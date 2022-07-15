@@ -11,11 +11,5 @@ local use = require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'machakann/vim-highlightedyank'
   use 'lewis6991/gitsigns.nvim'
-  use {
-    'iamcco/markdown-preview.nvim',
-    ft = {'markdown'},
-    run = 'cd app && npm i',
-    cmd = 'MarkdownPreview',
-    opt = true
-  }
+  use({ 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', setup = function() vim.g.mkdp_filetypes = { 'markdown' } end, ft = { 'markdown' }, })
 end)
